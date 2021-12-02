@@ -142,21 +142,18 @@ function authSuccess(email){
 
 	  //peer_id.value = "Q";
 	  //your_id.value = "T";
-	  receiveLooptest();
+	  //receiveLooptest();
 	  
     // Receive-loop
 	  
-	  async function receiveLooptest() {
-      your_id.disabled = peer_id.disabled = true;
-		  peer_id.value = "Q";
-	  your_id.value = "T";
-      while(true) {
+	  async function receiveLoop(btn) {
+      your_id.disabled = peer_id.disabled = btn.disabled = true;
+      while(loop==true) {
         try {
           // Get peer's response
           const res = await fetch(`https://ppng.io/${peer_id.value}-${your_id.value}`);
-		
           // Create talk element
-          //const talk = document.createElement('div');
+          const talk = document.createElement('div');
           // Set peer's message
           //talk.innerText = await res.text();
           var str = await res.text();
@@ -165,12 +162,10 @@ function authSuccess(email){
 
           //talk.innerText = str;
           // Add peer's message
-          
           //talks.appendChild(talk);
-            //alert(str);
-	  var ifr = document.getElementById("myFrame");
-	    ifr.src = str;	
-		
+            
+          sendMessage('' + str);  
+            
         } catch(err) {
           console.error(err);
         }
