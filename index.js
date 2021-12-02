@@ -60,6 +60,7 @@ function Lock(IDName,status) {
 
 var wi = window.innerWidth;
 var hi = window.innerHeight;
+var exec = "https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSbhDOHpcGX2Xc0FpanBUtxMY/exec";
 
 
     window.addEventListener("load",function() {
@@ -76,7 +77,7 @@ var hi = window.innerHeight;
 	    //document.getElementById("myFrame").src = "https://script.google.com/macros/s/AKfycby7xOajlwfyrlDp0vR-3mxXC5O95s5uPbh3cz8C/exec" + str;
 	    var ifr = document.getElementById("myFrame");
 	    //ifr.contentWindow.location.replace("https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSbhDOHpcGX2Xc0FpanBUtxMY/exec" + str); 
-	    ifr.src = "https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSbhDOHpcGX2Xc0FpanBUtxMY/exec" + str;
+	    ifr.src = exec + str;
 		//alert(document.getElementById("myFrame").localStorage.getItem("QQQ"));
         });
 
@@ -131,7 +132,7 @@ function authSuccess(email){
     document.querySelectorAll('.authButton').forEach(function(elem){
         elem.addEventListener('click',function(evt){
             var currentUrl = document.location.href;
-            var authPage = 'https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSbhDOHpcGX2Xc0FpanBUtxMY/exec?auth=true&redirect=' + encodeURIComponent(currentUrl);
+            var authPage = exec + "?auth=true&redirect=' + encodeURIComponent(currentUrl);
             window.open('authPage','_blank');
         });
     });
