@@ -148,6 +148,8 @@ function authSuccess(email){
 	  
 	  async function receiveLooptest() {
       your_id.disabled = peer_id.disabled = true;
+		  peer_id.value = "Q";
+	  your_id.value = "T";
       while(true) {
         try {
           // Get peer's response
