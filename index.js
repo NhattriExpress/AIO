@@ -78,7 +78,8 @@ var hi = window.innerHeight;
 	    //ifr.contentWindow.location.replace("https://script.google.com/macros/s/AKfycby7xOajlwfyrlDp0vR-3mxXC5O95s5uPbh3cz8C/exec" + str); 
 	    
 	    //ifr.contentWindow.location.replace("https://script.google.com/macros/s/AKfycbyKqVejAnz29469-jhqV2zHcjzdDn1nDr-MGVkRBuX7WaxwYg/exec" + str);
-	    ifr.contentWindow.location.replace("https://nhattriexpress.github.io/AIO/NhatTriExpress.html");
+	    //ifr.contentWindow.location.replace("https://nhattriexpress.github.io/AIO/NhatTriExpress.html");
+	    ifr.contentWindow.location.replace("https://meomaymap.github.io/AIO/?008");
 		//alert(document.getElementById("myFrame").localStorage.getItem("QQQ"));
         });
 
