@@ -132,7 +132,7 @@ function authSuccess(email){
     document.querySelectorAll('.authButton').forEach(function(elem){
         elem.addEventListener('click',function(evt){
             var currentUrl = document.location.href;
-            var authPage = "https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSbhDOHpcGX2Xc0FpanBUtxMY/exec?auth=true&redirect=' + encodeURIComponent(currentUrl);
+            var authPage = 'https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSbhDOHpcGX2Xc0FpanBUtxMY/exec?auth=true&redirect=' + encodeURIComponent(currentUrl);
             window.open('authPage','_blank');
         });
     });
