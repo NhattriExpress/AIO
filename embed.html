@@ -2,7 +2,16 @@
 <html>
 
 <body>
+<p>
+    <input placeholder="Your ID" id='your_id'>
+    <input placeholder="Peer ID" id='peer_id'>
+    <button onclick='receiveLoop(this)'>Connect</button>
+    <br>
+    <input placeholder="Message" id='message' size='50'>
+    <button onclick="send()">Send</button>
+  </p>    
 
+    
 <!-- Script loaded as iframe widget with fallback -->
 <div class="appsWidgetWrapper">
     <iframe class="appsWidget" id="myFrame" allow="camera *" src="https://script.google.com/macros/s/AKfycbynV_TwQA4OE5Te40mSEYNORm4Ma_rnX6zL5KWC3snHxz9WjP8/exec?embedIframe"></iframe>
