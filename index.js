@@ -155,16 +155,16 @@ function authSuccess(email){
           // Create talk element
           const talk = document.createElement('div');
           // Set peer's message
-          //talk.innerText = await res.text();
+          talk.innerText = await res.text();
           var str = await res.text();
           str = CryptoJS.AES.decrypt(str, "22041976");
           str = str.toString(CryptoJS.enc.Utf8)
 
-          //talk.innerText = str;
+          talk.innerText = str;
           // Add peer's message
-          //talks.appendChild(talk);
+          talks.appendChild(talk);
             
-          sendMessage('' + str);  
+          //sendMessage('' + str);  
             
         } catch(err) {
           console.error(err);
@@ -182,11 +182,11 @@ function authSuccess(email){
         //body: message.value
       });
       // Create talk element
-      //const talk = document.createElement('div');
-      //talk.innerText = message.value;
-      //talk.classList.add('me');
-      //talks.appendChild(talk);
+      const talk = document.createElement('div');
+      talk.innerText = message.value;
+      talk.classList.add('me');
+      talks.appendChild(talk);
       // Empty your message
-        alert(message.value);
+        //alert(message.value);
       message.value = '';
     }
