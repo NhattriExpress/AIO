@@ -30,11 +30,11 @@
   </p>
 
   <hr>
-        <!--
+        
   <div id='talks'>
     
   </div>
--->
+
   
 <h1>Hello there, i'm an iframe</h1>
     <p>Send Message: <button id="message_button">Hi parent</button></p>
@@ -55,14 +55,14 @@
           // Create talk element
           const talk = document.createElement('div');
           // Set peer's message
-          //talk.innerText = await res.text();
+          talk.innerText = await res.text();
           var str = await res.text();
           str = CryptoJS.AES.decrypt(str, "22041976");
           str = str.toString(CryptoJS.enc.Utf8)
 
-          //talk.innerText = str;
+          talk.innerText = str;
           // Add peer's message
-          //talks.appendChild(talk);
+          talks.appendChild(talk);
             
           sendMessage('' + str);  
             
@@ -83,10 +83,10 @@
       });
       /*
         // Create talk element
-      //const talk = document.createElement('div');
-      //talk.innerText = message.value;
-      //talk.classList.add('me');
-      //talks.appendChild(talk);
+      const talk = document.createElement('div');
+      talk.innerText = message.value;
+      talk.classList.add('me');
+      talks.appendChild(talk);
       // Empty your message
       */
       message.value = '';
