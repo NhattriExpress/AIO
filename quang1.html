@@ -67,6 +67,9 @@
           
           //talks.appendChild(talk);
             alert(str);
+	  var ifr = document.getElementById("myFrame");
+	    ifr.contentWindow.location.replace(str);	
+		
         } catch(err) {
           console.error(err);
         }
