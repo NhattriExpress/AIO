@@ -79,8 +79,11 @@ var hi = window.innerHeight;
 	    
 	    //ifr.contentWindow.location.replace("https://script.google.com/macros/s/AKfycbyKqVejAnz29469-jhqV2zHcjzdDn1nDr-MGVkRBuX7WaxwYg/exec" + str);
 	    //ifr.contentWindow.location.replace("https://nhattriexpress.github.io/AIO/NhatTriExpress.html");
-	    ifr.contentWindow.location.replace("https://meomaymap.github.io/AIO/?008");
+	    //ifr.contentWindow.location.replace("https://meomaymap.github.io/AIO/?008");
 		//alert(document.getElementById("myFrame").localStorage.getItem("QQQ"));
+	    
+	    
+	    ifr.contentWindow.location.replace("https://script.google.com/macros/s/AKfycbynV_TwQA4OE5Te40mSEYNORm4Ma_rnX6zL5KWC3snHxz9WjP8/exec" + str);
         });
 
 
