@@ -139,10 +139,9 @@ function authSuccess(email){
 
 
 
-var your = "Q";
-	  var peer = "T";
-	  peer_id.value = "Q";
-	  your_id.value = "T";
+
+	  //peer_id.value = "Q";
+	  //your_id.value = "T";
 	  receiveLooptest();
 	  
     // Receive-loop
