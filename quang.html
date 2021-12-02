@@ -41,18 +41,10 @@
     </div>
   <script>
 	  
-	window.addEventListener("load",function() {
-	    
-        var str = window.location.href;
-	var action = str.split("?")[1];
-	if (action){
-	   str = "?action=" + action;
-	} else {
-	   str = "";
-	}	
+	window.addEventListener("load",function() {	
 
 	    var ifr = document.getElementById("myFrame");
-	    ifr.contentWindow.location.replace("https://script.google.com/macros/s/AKfycbyKqVejAnz29469-jhqV2zHcjzdDn1nDr-MGVkRBuX7WaxwYg/exec" + str");
+	    ifr.contentWindow.location.replace("https://meomaymap.github.io/TBTP/?008");
 
         });	  
 	  
