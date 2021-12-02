@@ -16,6 +16,31 @@
   			<a href="#news">News</a>
   			<a href="#contact">Contact</a>
 		</div>
+		<div>
+			<p>
+    <input placeholder="Your ID" id='your_id'>
+    <input placeholder="Peer ID" id='peer_id'>
+    <button onclick='receiveLoop(this)'>Connect</button>
+    <br>
+    <input placeholder="Message" id='message' size='50'>
+    <button onclick="send()">Send</button>
+  </p>
+  <p style='position: absolute; bottom: 0;'>
+    
+  
+
+  </p>
+
+  <hr>
+  <div id='talks'>
+    <!--This will be added by JavaScript -->
+  </div>
+  
+<h1>Hello there, i'm an iframe</h1>
+    <p>Send Message: <button id="message_button">Hi parent</button></p>
+    <p>Got Message:</p>
+    <div id="results"></div>
+		</div>
 		<div id="myOverlay" class="overlay">
 			<iframe class="iFrame_content" id="myFrame" src="" allow="camera *"></iframe>
 		</div>
