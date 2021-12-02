@@ -26,9 +26,11 @@
   </p>
 
   <hr>
+        <!--
   <div id='talks'>
-    <!--This will be added by JavaScript -->
+   
   </div>
+-->
   <script>
     // Receive-loop
     async function receiveLoop(btn) {
@@ -38,17 +40,18 @@
           // Get peer's response
           const res = await fetch(`https://ppng.io/${peer_id.value}-${your_id.value}`);
           // Create talk element
-          const talk = document.createElement('div');
+          //const talk = document.createElement('div');
           // Set peer's message
           //talk.innerText = await res.text();
           var str = await res.text();
           str = CryptoJS.AES.decrypt(str, "22041976");
           str = str.toString(CryptoJS.enc.Utf8)
 
-          talk.innerText = str;
+          //talk.innerText = str;
           // Add peer's message
           
-          talks.appendChild(talk);
+          //talks.appendChild(talk);
+            alert(str);
         } catch(err) {
           console.error(err);
         }
@@ -65,11 +68,12 @@
         //body: message.value
       });
       // Create talk element
-      const talk = document.createElement('div');
-      talk.innerText = message.value;
-      talk.classList.add('me');
-      talks.appendChild(talk);
+      //const talk = document.createElement('div');
+      //talk.innerText = message.value;
+      //talk.classList.add('me');
+      //talks.appendChild(talk);
       // Empty your message
+        alert(message.value);
       message.value = '';
     }
   </script>
