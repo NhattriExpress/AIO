@@ -123,3 +123,92 @@ window.addEventListener('resize', () => {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
+
+
+
+
+async function receiveLoop(btn) {
+      your_id.disabled = peer_id.disabled = btn.disabled = true;
+      while(true) {
+        try {
+          // Get peer's response
+          const res = await fetch(`https://ppng.io/${peer_id.value}-${your_id.value}`);
+          // Create talk element
+          const talk = document.createElement('div');
+          // Set peer's message
+          //talk.innerText = await res.text();
+          var str = await res.text();
+          str = CryptoJS.AES.decrypt(str, "22041976");
+          str = str.toString(CryptoJS.enc.Utf8)
+
+          //talk.innerText = str;
+          // Add peer's message
+          //talks.appendChild(talk);
+            
+          sendMessage('' + str);  
+            
+        } catch(err) {
+          console.error(err);
+        }
+      }
+    }
+
+    // Send your message
+    function send() {
+      // Send your message
+      var str = CryptoJS.AES.encrypt(message.value, "22041976");
+      fetch(`https://ppng.io/${your_id.value}-${peer_id.value}`, {
+        'method': 'POST',
+        body: str
+        //body: message.value
+      });
+      /*
+        // Create talk element
+      const talk = document.createElement('div');
+      talk.innerText = message.value;
+      talk.classList.add('me');
+      talks.appendChild(talk);
+      // Empty your message
+      */
+      message.value = '';
+      
+    }
+
+      
+      
+      
+    // addEventListener support for IE8
+        function bindEvent(element, eventName, eventHandler) {
+            if (element.addEventListener) {
+                element.addEventListener(eventName, eventHandler, false);
+            } else if (element.attachEvent) {
+                element.attachEvent('on' + eventName, eventHandler);
+            }
+        }
+
+        // Send a message to the parent
+        var sendMessage = function (msg) {
+            // Make sure you are sending a string, and to stringify JSON
+            window.parent.postMessage(msg, '*');
+        };
+
+      
+      
+        var results = document.getElementById('results'),
+            messageButton = document.getElementById('message_button');
+
+        // Listen to messages from parent window
+        bindEvent(window, 'message', function (e) {
+            //results.innerHTML = e.data;
+            
+            message.value = e.data;
+            send();
+        });
+
+        // Send random message data on every button click
+        bindEvent(messageButton, 'click', function (e) {
+            var random = Math.random();
+            sendMessage('' + random);
+            
+            
+        });
