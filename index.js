@@ -74,8 +74,8 @@ var hi = window.innerHeight;
 	
 	    
 	    //document.getElementById("myFrame").src = "https://script.google.com/macros/s/AKfycby7xOajlwfyrlDp0vR-3mxXC5O95s5uPbh3cz8C/exec" + str;
-	    var ifr = document.getElementById("myFrame");
-	    ifr.contentWindow.location.replace("https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSbhDOHpcGX2Xc0FpanBUtxMY/exec" + str); 
+	    //var ifr = document.getElementById("myFrame");
+	    //ifr.contentWindow.location.replace("https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSbhDOHpcGX2Xc0FpanBUtxMY/exec" + str); 
 	    
 		//alert(document.getElementById("myFrame").localStorage.getItem("QQQ"));
         });
@@ -121,3 +121,17 @@ window.addEventListener('resize', () => {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
+
+
+function authSuccess(email){
+        console.log(email);
+        // Hide auth prompt overlay
+        document.querySelector('.loggedOut').style.display = 'none';
+    }
+    document.querySelectorAll('.authButton').forEach(function(elem){
+        elem.addEventListener('click',function(evt){
+            var currentUrl = document.location.href;
+            var authPage = 'https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSbhDOHpcGX2Xc0FpanBUtxMY/exec?auth=true&redirect=' + encodeURIComponent(currentUrl);
+            window.open('authPage','_blank');
+        });
+    });
