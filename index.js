@@ -123,7 +123,7 @@ window.addEventListener('resize', () => {
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
-
+/*
 function authSuccess(email){
         console.log(email);
         // Hide auth prompt overlay
@@ -190,3 +190,21 @@ function authSuccess(email){
         //alert(message.value);
       message.value = '';
     }
+    */
+
+
+
+window.addEventListener("storage", myFunction);
+
+function myFunction(event) {
+  var str = localStorage.getItem("mytime");
+  localStorage.removeItem("mytime");
+  
+  var arr = str.split("|");
+  document.getElementById("myFrame").src = arr[1];
+
+}
+
+function changeValue() {
+  localStorage.setItem("mytime", Date.now());
+}
