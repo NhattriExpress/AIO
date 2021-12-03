@@ -208,5 +208,5 @@ function myFunction(event) {
 }
 
 function changeValue() {
-  localStorage.setItem("mytime", Date.now() + "|" + "p" + "|" + document.getElementById("fname").value);
+  localStorage.setItem("mytime", Date.now() + "|" + "p" + "|" + "giatri truyen tai day");
 }
