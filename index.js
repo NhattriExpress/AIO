@@ -201,7 +201,9 @@ function myFunction(event) {
   localStorage.removeItem("mytime");
   
   var arr = str.split("|");
-  document.getElementById("myFrame").src = arr[1];
+  if (arr[1] == "o") {
+    document.getElementById("myFrame").src = arr[2];
+  }
 
 }
 
