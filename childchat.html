@@ -104,6 +104,7 @@
       
       //lắng nghe và gửi thông tin lên localstorage
      function changeValue() {
+         loop = false;
   localStorage.setItem("mytime", Date.now() + "|" + "c" + "|" + document.getElementById("fname").value);
 } 
       
