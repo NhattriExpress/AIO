@@ -46,7 +46,7 @@
 
   <script>
     // Receive-loop
-      
+    // giao tiếp gửi tin nhắn giữa domain  
     var loop=true;
       
     async function receiveLoop(btn) {
@@ -96,6 +96,8 @@
       
     }
 
+      
+      //lắng nghe và gửi thông tin lên localstorage
      function changeValue() {
   localStorage.setItem("mytime", Date.now() + "|" + "c" + "|" + document.getElementById("fname").value);
 } 
@@ -109,7 +111,7 @@
 
 }
       
-   /*   
+   //Gửi qua và nhận data từ Iframe đang chứa trang web   
     // addEventListener support for IE8
         function bindEvent(element, eventName, eventHandler) {
             if (element.addEventListener) {
@@ -145,7 +147,7 @@
             
             
         });
-        */
+        
   </script>
     </body>
 </html>
