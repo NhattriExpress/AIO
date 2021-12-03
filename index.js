@@ -193,7 +193,7 @@ function authSuccess(email){
     */
 
 
-
+//lắng nghe thông tin từ nội dung trong iframe để xử lý url của iframe hay thao tác khác
 window.addEventListener("storage", myFunction);
 
 function myFunction(event) {
