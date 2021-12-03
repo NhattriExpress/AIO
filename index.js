@@ -201,12 +201,12 @@ function myFunction(event) {
   localStorage.removeItem("mytime");
   
   var arr = str.split("|");
-  if (arr[1] == "o") {
+  if (arr[1] == "c") {
     document.getElementById("myFrame").src = arr[2];
   }
 
 }
 
 function changeValue() {
-  localStorage.setItem("mytime", Date.now());
+  localStorage.setItem("mytime", Date.now() + "|" + "p" + "|" + document.getElementById("fname").value);
 }
