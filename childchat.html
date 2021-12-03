@@ -15,6 +15,9 @@
 
     </head>
     <body>
+        <input type="text" id="fname" name="fname">
+<button onclick="changeValue()">Change a Storage Item</button>
+        
        <p>
     <input placeholder="Your ID" id='your_id'>
     <input placeholder="Peer ID" id='peer_id'>
@@ -93,9 +96,11 @@
       
     }
 
+     function changeValue() {
+  localStorage.setItem("mytime", Date.now()+"|"+document.getElementById("fname").value);
+} 
       
-      
-      
+   /*   
     // addEventListener support for IE8
         function bindEvent(element, eventName, eventHandler) {
             if (element.addEventListener) {
@@ -131,6 +136,7 @@
             
             
         });
+        */
   </script>
     </body>
 </html>
