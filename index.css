@@ -42,7 +42,7 @@ body {
 }
 
 .iFrame_content {
-	position: fixed;
+	position: absolute;
   	top: calc(var(--parent-height-menu) * 5);
 	width: 100vw;
 	width: calc(var(--vw, 1vw) * 100);
