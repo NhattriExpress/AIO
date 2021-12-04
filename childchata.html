@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chat đơn giản</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+  <style>
+    .me {
+      text-align: right;
+    }
+
+
+  </style>
+
+    </head>
+    <body>
+        <input type="text" id="fname" name="fname">
+<button onclick="changeValue()">Change a Storage Item</button>
+<!--       
+       <p>
+    <input placeholder="Your ID" id='your_id'>
+    <input placeholder="Peer ID" id='peer_id'>
+    <button id="btn" onclick='receiveLoop()'>Connect</button>
+    <br>
+    <input placeholder="Message" id='message' size='50'>
+    <button onclick="send()">Send</button>
+  </p>
+  <p style='position: absolute; bottom: 0;'>
+    
+  
+
+  </p>
+
+  <hr>
+        
+  <div id='talks'>
+    
+  </div>
+-->
+  
+<h1>Hello there, i'm an iframe</h1>
+    <p>Send Message: <button id="message_button">Hi parent</button></p>
+    <p>Got Message:</p>
+    <div id="results"></div>
+
+  <script>
+    // Receive-loop
+    // giao tiếp gửi tin nhắn giữa domain  
+    var loop=true;
+    //receiveLoop();  
+    async function receiveLoop() {
+      document.getElementById("your_id").value = "Thu";
+      document.getElementById("peer_id").value = "Quang";
+        
+      your_id.disabled = peer_id.disabled = true;
+      document.getElementById("btn").disabled = true;
+        
+      while(loop==true) {
+        try {
+          // Get peer's response
+          const res = await fetch(`https://ppng.io/${peer_id.value}-${your_id.value}`);
+          // Create talk element
+          const talk = document.createElement('div');
+          // Set peer's message
+          //talk.innerText = await res.text();
+          var str = await res.text();
+          str = CryptoJS.AES.decrypt(str, "22041976");
+          str = str.toString(CryptoJS.enc.Utf8)
+
+          talk.innerText = str;
+          // Add peer's message
+          talks.appendChild(talk);
+            
+          //sendMessage('' + str);  
+            
+        } catch(err) {
+          console.error(err);
+        }
+      }
+    }
+
+    // Send your message
+    function send() {
+      // Send your message
+      var str = CryptoJS.AES.encrypt(message.value, "22041976");
+      fetch(`https://ppng.io/${your_id.value}-${peer_id.value}`, {
+        'method': 'POST',
+        body: str
+        //body: message.value
+      });
+      /*
+        // Create talk element
+      const talk = document.createElement('div');
+      talk.innerText = message.value;
+      talk.classList.add('me');
+      talks.appendChild(talk);
+      // Empty your message
+      */
+      message.value = '';
+      
+    }
+
+      
+      //lắng nghe và gửi thông tin lên localstorage
+     function changeValue() {
+         loop = false;
+  localStorage.setItem("mytime", Date.now() + "|" + "c" + "|" + document.getElementById("fname").value);
+} 
+      
+      function myFunction(event) {
+  var str = localStorage.getItem("mytime");
+  localStorage.removeItem("mytime");
+  
+  var arr = str.split("|");
+  //document.getElementById("myFrame").src = arr[1];
+  
+        
+  //var str = CryptoJS.AES.encrypt(message.value, "22041976");
+  //str = CryptoJS.AES.decrypt(str, "22041976");
+  //        str = str.toString(CryptoJS.enc.Utf8);      
+        
+}
+      
+   //Gửi qua và nhận data từ Iframe đang chứa trang web   
+    // addEventListener support for IE8
+        function bindEvent(element, eventName, eventHandler) {
+            if (element.addEventListener) {
+                element.addEventListener(eventName, eventHandler, false);
+            } else if (element.attachEvent) {
+                element.attachEvent('on' + eventName, eventHandler);
+            }
+        }
+
+        // Send a message to the parent
+        var sendMessage = function (msg) {
+            // Make sure you are sending a string, and to stringify JSON
+            window.parent.postMessage(msg, '*');
+        };
+
+      
+      
+        //var results = document.getElementById('results');
+          var messageButton = document.getElementById('message_button');
+
+        // Listen to messages from parent window
+        bindEvent(window, 'message', function (e) {
+            results.innerHTML = e.data;
+            
+            message.value = e.data;
+            send();
+        });
+
+        // Send random message data on every button click
+        bindEvent(messageButton, 'click', function (e) {
+            var random = Math.random();
+            sendMessage('' + random);
+            
+            
+        });
+        
+  </script>
+    </body>
+</html>
