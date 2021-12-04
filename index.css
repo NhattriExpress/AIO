@@ -31,9 +31,9 @@ body {
   	display: block;
   	color: #f2f2f2;
   	text-align: center;
-  	padding: 1vh 1vh;
+  	padding: var(--parent-height-menu) var(--parent-height-menu);
   	text-decoration: none;
-  	font-size: 3vh;
+  	font-size: calc(var(--parent-height-menu) * 3);
 }
 
 .navbar a:hover {
@@ -41,13 +41,24 @@ body {
   	color: black;
 }
 
-.iFrame_content {
+.overlay {
 	position: absolute;
   	top: calc(var(--parent-height-menu) * 5);
 	width: 100vw;
 	width: calc(var(--vw, 1vw) * 100);
 	height: 95vh;
 	height: calc(var(--vh, 1vh) * 95);
+}
+
+.iFrame_content {
+	width: 100%;
+	height: 100%;
+	/*
+	width: 100vw;
+	width: calc(var(--vw, 1vw) * 100);
+	height: 95vh;
+	height: calc(var(--vh, 1vh) * 95);
+	*/
 }
 
 
