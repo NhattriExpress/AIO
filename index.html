@@ -1,59 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, height=device-height, maximum-scale=1.0, initial-scale=1">
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, height=device-height, maximum-scale=1.0, initial-scale=1">
 
-<link rel="stylesheet" href="index.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script type="text/javascript" src="index_general.js"></script>
-  <script type="text/javascript" src="index_private_1.js"></script>	
-	
-  
-
-
+	<link rel="stylesheet" href="index.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  	<script type="text/javascript" src="index_general.js"></script>
+  	<script type="text/javascript" src="index_private_1.js"></script>	
 </head>
 <body>
-	<!--
-	<p>
-    <input placeholder="Your ID" id='your_id'>
-    <input placeholder="Peer ID" id='peer_id'>
-    <button onclick='receiveLoop(this)'>Connect</button>
-    <br>
-    <input placeholder="Message" id='message' size='50'>
-    <button onclick="send()">Send</button>
-  </p> 
-	<p style='position: absolute; bottom: 0;'>
-    
-  
+	<div class="navbar">
+  		<a href="#home">Home</a>
+  		<a href="#news">News</a>
+  		<a href="#contact">Contact</a>
+	</div>
+	<div id="myOverlay" class="overlay">
+		<iframe class="iFrame_content" id="myFrame" src="" allow="camera *"></iframe>
+	</div>
 
-  </p>
-
-  <hr>
-        
-  <div id='talks'>
-    
-  </div>
-	<div class="appsWidgetWrapper">
-    <iframe class="appsWidget" id="myFrame" allow="camera *" src=""></iframe>
-    <div class="loggedOut">
-        <div class="loggedOutContent">
-            <div class="loggedOutText">You need to "authorize" this widget.</div>
-            <button class="authButton">Log In / Authorize</button>
-        </div>
-    </div>
-</div>
--->
-		
-		<div id="myOverlay" class="overlay">
-				<iframe class="iFrame_content" id="myFrame" src="" allow="camera *"></iframe>
-		</div>
-	
-
-
-<!-- Fetch script as JSONP with callback -->
-<!--	
-<script src="https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSbhDOHpcGX2Xc0FpanBUtxMY/exec?jsonpCallback=authSuccess"></script>
--->
 </body>
 </html>
