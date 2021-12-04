@@ -1,30 +1,49 @@
 <style>
-	:root {--parent-height-1: 5vh;}
+:root {--parent-height-1: 5vh;}
 		
-	* {touch-action: manipulation;}
+* {touch-action: manipulation;}
 		
-	/* disable pull to refresh, keeps glow effects */
-	html, body {
-		font-family: Arial;
-		padding: 0px;
-		margin: 0px;
-		overscroll-behavior-y: contain; 
-	}
+/* disable pull to refresh, keeps glow effects */
+html, body {
+	font-family: Arial;
+	padding: 0px;
+	margin: 0px;
+	overscroll-behavior-y: contain; 
+}
   
-  body {
- overflow: hidden;
- }
+body {
+	overflow: hidden;
+}
 
+.navbar {
+ 	overflow: hidden;
+  	background-color: #333;
+  	position: fixed;
+  	top: 0;
+  	width: 100%;
+}
 
+.navbar a {
+  	float: left;
+  	display: block;
+  	color: #f2f2f2;
+  	text-align: center;
+  	padding: 1vh 1vh;
+  	text-decoration: none;
+  	font-size: 3vh;
+}
 
+.navbar a:hover {
+ 	background: #ddd;
+  	color: black;
+}
 
-        .iFrame_content {
-            width: 100vw;
-            width: calc(var(--vw, 1vw) * 100);
-            height: 100vh;
-            height: calc(var(--vh, 1vh) * 100);
-            
-        }
+.iFrame_content {
+	width: 100vw;
+	width: calc(var(--vw, 1vw) * 100);
+	height: 95vh;
+	height: calc(var(--vh, 1vh) * 95);
+}
 
 
 
