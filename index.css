@@ -31,9 +31,9 @@ body {
   	display: block;
   	color: #f2f2f2;
   	text-align: center;
-  	padding: var(--parent-height-menu) var(--parent-height-menu);
+  	padding: 1vh 1vh;
   	text-decoration: none;
-  	font-size: calc(var(--parent-height-menu) * 3);
+  	font-size: 3vh;
 }
 
 .navbar a:hover {
@@ -42,7 +42,7 @@ body {
 }
 
 .iFrame_content {
-	position: absolute;
+	position: fixed;
   	top: calc(var(--parent-height-menu) * 5);
 	width: 100vw;
 	width: calc(var(--vw, 1vw) * 100);
