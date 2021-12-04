@@ -7,7 +7,9 @@ function myFunction(event) {
   
   var arr = str.split("|");
   if (arr[1] == "c") {
-    document.getElementById("myFrame").src = arr[2];
+    //document.getElementById("myFrame").src = arr[2];
+    
+    document.getElementById("myFrame").contentWindow.location.replace(arr[2]);
   }
 
 }
