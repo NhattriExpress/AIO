@@ -29,6 +29,8 @@ function myFunction(event) {
   var str = localStorage.getItem("mytime");
   localStorage.removeItem("mytime");
   
+alert("3-1: " + str);	
+	
   var arr = str.split("|");
 	//alert(window.location.href + "    ---   " + arr[4]);
   if (arr[2] == "2") {
