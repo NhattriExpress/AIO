@@ -40,6 +40,7 @@ alert("3-1: " + str);
     } else {
     	//set thông báo thành công về lại cho google page biết
 	localStorage.setItem("mytime", '1' + '|' + '2' + '|' + '1' + '|' + '1' + '|' + 'Check OK');
+	    alert("1 đã gửi 3");
     }
   }
 
