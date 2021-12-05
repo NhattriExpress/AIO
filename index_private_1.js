@@ -29,7 +29,10 @@ function myFunction(event) {
   var str = localStorage.getItem("mytime");
   localStorage.removeItem("mytime");
   
-alert("3-1: " + str);	
+alert("3-1: " + str);
+	
+	localStorage.setItem('mytime', '1' + '|' + '2' + '|' + '1' + '|' + '1' + '|' + 'Check OK');
+	alert("1: " + localStorage.getItem("mytime"));
 	
   var arr = str.split("|");
 	alert(window.location.href + "    ---   " + arr[4]);
