@@ -31,14 +31,14 @@ function myFunction(event) {
   
 alert("3-1: " + str);
 	
-	localStorage.setItem('mytime', '1' + '|' + '2' + '|' + '1' + '|' + '1' + '|' + 'Check OK');
-	alert("1: " + localStorage.getItem("mytime"));
+	//localStorage.setItem('mytime', '1' + '|' + '2' + '|' + '1' + '|' + '1' + '|' + 'Check OK');
+	//alert("1: " + localStorage.getItem("mytime"));
 	
   var arr = str.split("|");
 	alert(window.location.href + "    ---   " + arr[4]);
 	
-	localStorage.setItem('mytime', '1' + '|' + '2' + '|' + '1' + '|' + '1' + '|' + 'Check OK');
-	    alert("1 đã gửi 3");
+	//localStorage.setItem('mytime', '1' + '|' + '2' + '|' + '1' + '|' + '1' + '|' + 'Check OK');
+	//    alert("1 đã gửi 3");
 	
   if (arr[2] == "2") {
     //document.getElementById("myFrame").src = arr[2];
