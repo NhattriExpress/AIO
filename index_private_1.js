@@ -36,21 +36,26 @@ function myFunction(event) {
 	//alert(window.location.href + "    ---   " + arr[5]);
 	
 	
-  if (arr[2] == "2") {
-    //document.getElementById("myFrame").src = arr[2];
-    if (arr[5] != window.location.href) {
-    	document.getElementById("myFrame").contentWindow.location.replace("https://24h.com.vn");
-    } else {
-    	//set thông báo thành công về lại cho google page biết
-	//if (arr[3] == "1") {
-	    localStorage.setItem('mytime', '1' + '|' + '2' + '|' + '1' + '|' + '2' + '|' + Date.now() + '|' + 'Check OK');
-	    //alert("1 đã gửi 3");
-	//} else {
-	//	localStorage.removeItem("mytime");
-	//}
-    }
+  	if (arr[2] == "2") {
+    		//document.getElementById("myFrame").src = arr[2];
+    		if (arr[5] != window.location.href) {
+    		document.getElementById("myFrame").contentWindow.location.replace("https://24h.com.vn");
+    		} else {
+    			//set thông báo thành công về lại cho google page biết
+			//if (arr[3] == "1") {
+	    		localStorage.setItem('mytime', '1' + '|' + '2' + '|' + '2' + '|' + '2' + '|' + Date.now() + '|' + 'Check OK');
+	    		//alert("1 đã gửi 3");
+			//} else {
+			//	localStorage.removeItem("mytime");
+			//}
+    		}
+  	}
+	  
+	if (arr[2] == "1") {
+		document.getElementById("myFrame").contentWindow.location.replace(arr[5]);
+	}  
   }
-  }
+	
 
 }
 
