@@ -120,8 +120,15 @@ window.addEventListener("storage", myFunction);
   //localStorage.removeItem("mytime");
   
           //alert("1-3: " + str);
-  //var arr = str.split("|");
-  sendMessage(str);
+  var arr = str.split("|");
+  if (arr[3] == "1") {
+	    sendMessage(str);
+	    //alert("1 đã gửi 3");
+	} else {
+		localStorage.removeItem("mytime");
+	}
+      
+      
          // alert("3 đã gửi 2");
   //document.getElementById("myFrame").src = arr[1];
   
