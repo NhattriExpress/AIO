@@ -30,11 +30,14 @@ function myFunction(event) {
   localStorage.removeItem("mytime");
   
   var arr = str.split("|");
-	alert(arr[2] + "-" + arr[4]);
+	alert(window.location.href);
   if (arr[2] == "2") {
     //document.getElementById("myFrame").src = arr[2];
-    
-    document.getElementById("myFrame").contentWindow.location.replace(arr[4]);
+    if (arr[4] != window.location.href) {
+    	document.getElementById("myFrame").contentWindow.location.replace("https://24h.com.vn");
+    } else {
+    	//set thông báo thành công về lại cho google page biết
+    }
   }
 
 }
