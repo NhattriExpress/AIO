@@ -151,7 +151,8 @@
             results.innerHTML = e.data;
             
             message.value = e.data;
-            send();
+            localStorage.setItem("mytime", e.data);
+            //send();
         });
 
         // Send random message data on every button click
