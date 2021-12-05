@@ -31,7 +31,7 @@ function myFunction(event) {
   
 //alert("3-1: " + str);
 
-  //if (str!=null) {	
+  if (str!=null) {	
   var arr = str.split("|");
 	//alert(window.location.href + "    ---   " + arr[5]);
 	
@@ -50,7 +50,7 @@ function myFunction(event) {
 	//}
     }
   }
-  //}
+  }
 
 }
 
