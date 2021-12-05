@@ -30,11 +30,11 @@ function myFunction(event) {
   localStorage.removeItem("mytime");
   
   var arr = str.split("|");
-	alert(arr[2] + "-" + arr[5]);
+	alert(arr[2] + "-" + arr[4]);
   if (arr[2] == "2") {
     //document.getElementById("myFrame").src = arr[2];
     
-    document.getElementById("myFrame").contentWindow.location.replace(arr[5]);
+    document.getElementById("myFrame").contentWindow.location.replace(arr[4]);
   }
 
 }
