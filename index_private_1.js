@@ -27,7 +27,7 @@ window.addEventListener("storage", myFunction);
 
 function myFunction(event) {
   var str = localStorage.getItem("mytime");
-  //localStorage.removeItem("mytime");
+  localStorage.removeItem("mytime");
   
 //alert("3-1: " + str);
 
