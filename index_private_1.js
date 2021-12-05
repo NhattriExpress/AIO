@@ -31,7 +31,7 @@ function myFunction(event) {
   
 //alert("3-1: " + str);
 
-	
+  if (str!=null) {	
   var arr = str.split("|");
 	//alert(window.location.href + "    ---   " + arr[5]);
 	
@@ -42,9 +42,14 @@ function myFunction(event) {
     	document.getElementById("myFrame").contentWindow.location.replace("https://24h.com.vn");
     } else {
     	//set thông báo thành công về lại cho google page biết
-	localStorage.setItem('mytime', '1' + '|' + '2' + '|' + '1' + '|' + '1' + '|' + Date.now() + '|' + 'Check OK');
+	if (arr[3] == "1") {
+	    localStorage.setItem('mytime', '1' + '|' + '2' + '|' + '1' + '|' + '2' + '|' + Date.now() + '|' + 'Check OK');
 	    //alert("1 đã gửi 3");
+	} else {
+		localStorage.removeItem("mytime");
+	}
     }
+  }
   }
 
 }
