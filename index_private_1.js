@@ -30,7 +30,7 @@ function myFunction(event) {
   localStorage.removeItem("mytime");
   
   var arr = str.split("|");
-	alert(window.location.href + "    ---   " + arr[4]);
+	//alert(window.location.href + "    ---   " + arr[4]);
   if (arr[2] == "2") {
     //document.getElementById("myFrame").src = arr[2];
     if (arr[4] != window.location.href) {
