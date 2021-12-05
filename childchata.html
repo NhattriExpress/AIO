@@ -116,17 +116,17 @@ window.addEventListener("storage", myFunction);
       function myFunction(event) {
   var str = localStorage.getItem("mytime");
           
-  if (str != null) {        
+  //if (str != null) {        
   //localStorage.removeItem("mytime");
   
           //alert("1-3: " + str);
   var arr = str.split("|");
-  if (arr[3] == "1") {
+  //if (arr[3] == "1") {
 	    sendMessage(str);
 	    //alert("1 đã gửi 3");
-	} else {
-		localStorage.removeItem("mytime");
-	}
+//	} else {
+//		localStorage.removeItem("mytime");
+//	}
       
       
          // alert("3 đã gửi 2");
@@ -136,7 +136,7 @@ window.addEventListener("storage", myFunction);
   //var str = CryptoJS.AES.encrypt(message.value, "22041976");
   //str = CryptoJS.AES.decrypt(str, "22041976");
   //        str = str.toString(CryptoJS.enc.Utf8);      
-  }       
+  //}       
 }
       
    //Gửi qua và nhận data từ Iframe đang chứa trang web   
