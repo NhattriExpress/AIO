@@ -37,6 +37,7 @@ function myFunction(event) {
     	document.getElementById("myFrame").contentWindow.location.replace("https://24h.com.vn");
     } else {
     	//set thông báo thành công về lại cho google page biết
+	localStorage.setItem("mytime", '1' + '|' + '2' + '|' + '1' + '|' + '1' + '|' + 'Check OK');
     }
   }
 
