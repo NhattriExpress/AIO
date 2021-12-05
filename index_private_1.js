@@ -30,6 +30,7 @@ function myFunction(event) {
   localStorage.removeItem("mytime");
   
   var arr = str.split("|");
+	alert(arr[2] + "-" + arr[5]);
   if (arr[2] == "2") {
     //document.getElementById("myFrame").src = arr[2];
     
