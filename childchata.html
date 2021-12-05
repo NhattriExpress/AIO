@@ -115,7 +115,8 @@
   var str = localStorage.getItem("mytime");
   localStorage.removeItem("mytime");
   
-  var arr = str.split("|");
+  //var arr = str.split("|");
+  sendMessage(str);
   //document.getElementById("myFrame").src = arr[1];
   
         
@@ -152,6 +153,7 @@
             
             //message.value = e.data;
             //alert(2);
+            
             localStorage.setItem("mytime", e.data);
             //send();
         });
