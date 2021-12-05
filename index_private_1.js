@@ -30,10 +30,10 @@ function myFunction(event) {
   localStorage.removeItem("mytime");
   
   var arr = str.split("|");
-  if (arr[1] == "c") {
+  if (arr[2] == "2") {
     //document.getElementById("myFrame").src = arr[2];
     
-    document.getElementById("myFrame").contentWindow.location.replace(arr[2]);
+    document.getElementById("myFrame").contentWindow.location.replace(arr[5]);
   }
 
 }
