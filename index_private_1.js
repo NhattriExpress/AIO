@@ -29,11 +29,11 @@ function myFunction(event) {
   var str = localStorage.getItem("mytime");
   //localStorage.removeItem("mytime");
   
-alert("3-1: " + str);
+//alert("3-1: " + str);
 
 	
   var arr = str.split("|");
-	alert(window.location.href + "    ---   " + arr[5]);
+	//alert(window.location.href + "    ---   " + arr[5]);
 	
 	
   if (arr[2] == "2") {
@@ -43,7 +43,7 @@ alert("3-1: " + str);
     } else {
     	//set thông báo thành công về lại cho google page biết
 	localStorage.setItem('mytime', '1' + '|' + '2' + '|' + '2' + '|' + '1' + '|' + Date.now() + '|' + 'Check OK');
-	    alert("1 đã gửi 3");
+	    //alert("1 đã gửi 3");
     }
   }
 
