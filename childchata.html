@@ -173,6 +173,7 @@ window.addEventListener("storage", myFunction);
             if (arr[1]!="2") {
             	localStorage.setItem("mytime", e.data);
 	    } else {
+		    alert(arr[2] + " ----- " + arr[5]);
 	    	if (arr[2]=="3" && arr[5]=="deleteStorage") {
 			localStorage.removeItem("mytime");
 		}
