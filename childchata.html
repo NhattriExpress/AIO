@@ -115,7 +115,7 @@ window.addEventListener("storage", myFunction);
       
       function myFunction(event) {
   var str = localStorage.getItem("mytime");
-          
+          localStorage.removeItem("mytime");
   if (str != null) {        
   //localStorage.removeItem("mytime");
   
