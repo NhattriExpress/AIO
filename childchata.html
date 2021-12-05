@@ -164,12 +164,19 @@ window.addEventListener("storage", myFunction);
         bindEvent(window, 'message', function (e) {
             
             results.innerHTML = e.data;
-            
+            var str = e.data;
+	    var arr = str.split("|");
+	
             //alert("2-3: " + e.data);
             //message.value = e.data;
             //alert(2);
-            
-            localStorage.setItem("mytime", e.data);
+            if (arr[1]!="2") {
+            	localStorage.setItem("mytime", e.data);
+	    } else {
+	    	if (arr[2]!="3" && arr[3]!="deleteStorage") {
+			localStorage.removeItem("mytime");
+		}
+	    }
             //alert("3 đã gửi 1");
             //send();
         });
