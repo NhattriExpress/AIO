@@ -18,6 +18,54 @@ body {
 	overflow: hidden;
 }
 
+
+#container_loader {
+	position: absolute;
+    top:0px;
+
+}
+
+.main_loader {
+    width: 100vw;
+    height: 100vh;
+    /*background: #2185C5;*/
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+
+
+}
+
+.loader{
+    width: auto;
+    height: auto;
+    background: white;
+    display: inline-block;
+    padding: 10px;
+    
+    border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-bottom: 16px solid blue;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
 .navbar {
  	overflow: hidden;
   	background-color: #333;
