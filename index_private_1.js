@@ -2,6 +2,8 @@ var exec = "https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSb
 
 
     window.addEventListener("load",function() {
+	
+	document.getElementById("container_loader").style.visibility = "visible";    
 	    
         var str = window.location.href;
 	var action = str.split("?")[1];
@@ -43,6 +45,7 @@ function myFunction(event) {
     		} else {
     			//set thông báo thành công về lại cho google page biết
 			//if (arr[3] == "1") {
+			document.getElementById("container_loader").style.visibility = "hidden";
 	    		localStorage.setItem('mytime', '1' + '|' + '2' + '|' + '2' + '|' + '2' + '|' + Date.now() + '|' + 'Check OK');
 	    		//alert("1 đã gửi 3");
 			//} else {
