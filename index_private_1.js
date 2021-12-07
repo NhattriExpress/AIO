@@ -24,6 +24,11 @@ var exec = "https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSb
       ifr.contentWindow.location.replace("https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSbhDOHpcGX2Xc0FpanBUtxMY/exec" + str);
         });
 
+//lắng nghe thông tin màn hình xoay
+window.addEventListener("orientationchange", function(event) {
+  alert("the orientation of the device is now " + event.target.screen.orientation.angle);
+});
+
 //lắng nghe thông tin từ nội dung trong iframe để xử lý url của iframe hay thao tác khác
 window.addEventListener("storage", myFunction);
 
