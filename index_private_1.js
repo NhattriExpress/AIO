@@ -87,3 +87,16 @@ function myFunction(event) {
 function changeValue() {
   localStorage.setItem("mytime", Date.now() + "|" + "p" + "|" + "giatri truyen tai day");
 }
+
+function PlayVideo() {
+
+  var video = document.getElementById("myVideo");
+  var btn = document.getElementById("myBtn");
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
