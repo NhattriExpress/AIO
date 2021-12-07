@@ -26,7 +26,13 @@ var exec = "https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSb
 
 //lắng nghe thông tin màn hình xoay
 window.addEventListener("orientationchange", function(event) {
-  alert("the orientation of the device is now " + event.target.screen.orientation.angle);
+  //alert("the orientation of the device is now " + event.target.screen.orientation.angle);
+	var QuangCao = document.getElementById("QuangCao");
+	if (event.target.screen.orientation.angle!=0) {
+		QuangCao.style.visibility = "visible";
+	} else {
+		QuangCao.style.visibility = "hidden";
+	}
 });
 
 //lắng nghe thông tin từ nội dung trong iframe để xử lý url của iframe hay thao tác khác
