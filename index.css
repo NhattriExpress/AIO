@@ -28,6 +28,16 @@ body {
     	height: 100vh;
 }
 
+#HuongDan {
+	position: absolute;
+    	top:0px;
+	z-index: 0;
+	visibility:hidden;
+	background-color: green;
+	width: 100vw;
+    	height: 100vh;
+}
+
 #container_loader {
 	position: absolute;
     top:0px;
