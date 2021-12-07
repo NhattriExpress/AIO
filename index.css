@@ -24,6 +24,8 @@ body {
 	z-index: 0;
 	visibility:hidden;
 	background-color: blue;
+	width: 100vw;
+    	height: 100vh;
 }
 
 #container_loader {
