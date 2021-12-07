@@ -26,10 +26,10 @@ var exec = "https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSb
 
 //lắng nghe thông tin màn hình xoay
 window.addEventListener("orientationchange", function(event) {
-  //alert("the orientation of the device is now " + event.target.screen.orientation.angle);
+  alert("the orientation of the device is now " + event.target.screen.orientation.angle);
 	var QuangCao = document.getElementById("QuangCao");
 	if (event.target.screen.orientation.angle!=0) {
-		alert("the orientation of the device is now " + event.target.screen.orientation.angle);
+		//alert("the orientation of the device is now " + event.target.screen.orientation.angle);
 		QuangCao.style.visibility = "visible";
 	} else {
 		QuangCao.style.visibility = "hidden";
