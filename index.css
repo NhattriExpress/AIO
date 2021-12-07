@@ -18,6 +18,13 @@ body {
 	overflow: hidden;
 }
 
+#QuangCao {
+	position: absolute;
+    	top:0px;
+	z-index: 0;
+	visibility:hidden;
+	background-color: blue;
+}
 
 #container_loader {
 	position: absolute;
