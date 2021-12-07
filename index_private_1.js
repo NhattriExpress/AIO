@@ -26,13 +26,23 @@ var exec = "https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSb
 
 //lắng nghe thông tin màn hình xoay
 window.addEventListener("orientationchange", function(event) {
-  alert("the orientation of the device is now " + event.target.screen.orientation.angle);
+  //alert("the orientation of the device is now " + event.target.screen.orientation.angle);
 	var QC = document.getElementById("QuangCao");
-	if (event.target.screen.orientation.angle!=0) {
+	var HD = document.getElementById("HuongDan");
+	if (event.target.screen.orientation.angle==90) {
 		//alert("the orientation of the device is now " + event.target.screen.orientation.angle);
 		QC.style.visibility = "visible";
-	} else {
+		HD.style.visibility = "hidden";
+	} 
+	
+	if (event.target.screen.orientation.angle==270) {
+		//alert("the orientation of the device is now " + event.target.screen.orientation.angle);
+		HD.style.visibility = "visible";
 		QC.style.visibility = "hidden";
+	}
+	if (event.target.screen.orientation.angle==0) {
+		QC.style.visibility = "hidden";
+		HD.style.visibility = "hidden";
 	}
 });
 
