@@ -6,6 +6,9 @@ var exec = "https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSb
 	document.getElementById("container_loader").style.visibility = "visible"; 
 	    
 	AddNewStyleRule (".navbar a:hover", "{background: #ddd; color: black;}");
+	var script_tag = document.createElement('script');
+	script_tag.setAttribute('src','index_general.js');
+	document.head.appendChild(script_tag);
 	    
 	    
 	    
