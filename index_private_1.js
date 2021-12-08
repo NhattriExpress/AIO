@@ -24,6 +24,16 @@ var exec = "https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSb
       ifr.contentWindow.location.replace("https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSbhDOHpcGX2Xc0FpanBUtxMY/exec" + str);
         });
 
+
+setTimeout(function(){ 
+	if (document.getElementById("container_loader").style.visibility == "visible") {
+		location.reload();
+	}
+
+		     
+}, 3000);
+          
+
 //lắng nghe thông tin màn hình xoay
 window.addEventListener("orientationchange", function(event) {
   //alert("the orientation of the device is now " + event.target.screen.orientation.angle);
