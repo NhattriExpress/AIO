@@ -122,11 +122,12 @@ body {
   	font-size: 3vh;
 }
 
+/*
 .navbar a:hover {
  	background: #ddd;
   	color: black;
 }
-
+*/
 .overlay {
 	/*position: absolute;
   	top: calc(var(--parent-height-menu) * 5);*/
