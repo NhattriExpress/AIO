@@ -3,7 +3,11 @@ var exec = "https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSb
 
     window.addEventListener("load",function() {
 	
-	document.getElementById("container_loader").style.visibility = "visible";    
+	document.getElementById("container_loader").style.visibility = "visible"; 
+	    
+	AddNewStyleRule (".navbar a:hover", "{background: #ddd; color: black;}");
+	    
+	    
 	    
         var str = window.location.href;
 	var action = str.split("?")[1];
@@ -110,3 +114,20 @@ function PlayVideo() {
     btn.innerHTML = "Play";
   }
 }
+
+
+function AddNewStyleRule (rule,content) {
+            var styleTag = document.getElementById ("myStyle");
+
+                // the empty style sheet
+            var sheet = styleTag.sheet ? styleTag.sheet : styleTag.styleSheet;
+            
+            if (sheet.insertRule) {   // all browsers, except IE before version 9
+                sheet.insertRule (rule + " " + content, 0);
+            }
+            else {  // Internet Explorer before version 9
+                if (sheet.addRule) {
+                    sheet.addRule (rule, content, 0);
+                }
+            }
+        }
