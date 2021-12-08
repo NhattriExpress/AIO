@@ -31,7 +31,7 @@ setTimeout(function(){
 	}
 
 		     
-}, 8000);
+}, 3000);
           
 
 //lắng nghe thông tin màn hình xoay
