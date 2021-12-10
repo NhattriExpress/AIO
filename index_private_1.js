@@ -35,7 +35,9 @@ var exec = "https://script.google.com/macros/s/AKfycbxDqpPdp4xys-zmMOC9NAeIOQNrI
 	    
 	    //ifr.contentWindow.location.replace("https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSbhDOHpcGX2Xc0FpanBUtxMY/exec" + str);
 	    
-	     ifr.contentWindow.location.replace("https://script.google.com/macros/s/AKfycbxDqpPdp4xys-zmMOC9NAeIOQNrItdWB8v3C1kf/exec" + str);
+	     //ifr.contentWindow.location.replace("https://script.google.com/macros/s/AKfycbxDqpPdp4xys-zmMOC9NAeIOQNrItdWB8v3C1kf/exec" + str);
+	    
+	    ifr.contentWindow.location.replace("https://script.google.com/macros/s/AKfycbw5rw-c9VwbRfhuUndHDwPVzuc3Bxge4_Vjjg-x/exec" + str);
         });
 
 
