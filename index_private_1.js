@@ -1,5 +1,5 @@
-var exec = "https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSbhDOHpcGX2Xc0FpanBUtxMY/exec";
-
+//var exec = "https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSbhDOHpcGX2Xc0FpanBUtxMY/exec"; //NHATTRIEXPRESS
+var exec = "https://script.google.com/macros/s/AKfycbzICEjaEj0fw5tXxy-DeEkGGaXe0FOVR5GZ8MqDSg/exec"; Nhattri_AIO_Program
 
     window.addEventListener("load",function() {
 	
@@ -28,7 +28,11 @@ var exec = "https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSb
 		//alert(document.getElementById("myFrame").localStorage.getItem("QQQ"));
       
       //ifr.src = "https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSbhDOHpcGX2Xc0FpanBUtxMY/exec" + str;
-      ifr.contentWindow.location.replace("https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSbhDOHpcGX2Xc0FpanBUtxMY/exec" + str);
+      
+	    
+	    //ifr.contentWindow.location.replace("https://script.google.com/macros/s/AKfycbw8MfEDiLd4GRkWVHDxaiqZlmKSbhDOHpcGX2Xc0FpanBUtxMY/exec" + str);
+	    
+	     ifr.contentWindow.location.replace("https://script.google.com/macros/s/AKfycbzICEjaEj0fw5tXxy-DeEkGGaXe0FOVR5GZ8MqDSg/exec" + str);
         });
 
 
